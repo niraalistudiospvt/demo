@@ -23,11 +23,13 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<sonar.host.url>http://18.206.175.137:9000/</sonar.host.url>
-		<!--   
+		
 			<sonar.login>admin</sonar.login>
 			<sonar.password>admin</sonar.password>
-			-->
-		<sonar.login>709d29af4443493aacf89681eeed5d3140ef9b22</sonar.login>
+			
+		<!--   
+ 				<sonar.login>709d29af4443493aacf89681eeed5d3140ef9b22</sonar.login>
+		-->
 	</properties>
 	
 	<!-- 
