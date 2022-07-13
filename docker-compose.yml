@@ -1,0 +1,33 @@
+version: '3.5'
+services:
+  spring-boot-mongo:
+    image: gopalakustagi24/spring-boot-mongo-docker:1
+    ports:
+    - 8080:8080
+    environment:
+    - MONGO_DB_USERNAME=devdb
+    - MONGO_DB_PASSWORD=devdb@123
+    - MONGO_DB_HOSTNAME=mongo
+    networks:
+    - springappbridge
+    depends_on:
+    - mongo
+  mongo:
+    image: mongo
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=devdb
+    - MONGO_INITDB_ROOT_PASSWORD=devdb@123
+    networks:
+    - springappbridge
+    volumes:
+    - mongodb:/data/db
+volumes:
+  mongodb:
+    driver: local
+networks:
+  springappbridge:
+    driver: bridge
+      
+      
+      
+ 

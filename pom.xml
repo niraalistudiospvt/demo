@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>demo</artifactId>
+	<!-- 
+		Re Nexus Server - if the snapshot key word available in the below tag, the file and filders
+		would be uploaded to snapshot repository, if only the version number is mentioned, then 
+		the file and folders would be available to 
+	 <version>0.0.1-SNAPSHOT</version>  -->
+	<version>2.0.0</version>
+	
+	<packaging>war</packaging>
+	<name>demo</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>1.8</java.version>
+		<sonar.host.url>http://54.147.147.47:9000/</sonar.host.url>
+		<!--   
+			<sonar.login>admin</sonar.login>
+			<sonar.password>admin</sonar.password>
+			-->
+		<sonar.login>709d29af4443493aacf89681eeed5d3140ef9b22</sonar.login>
+	</properties>
+	
+	<!-- 
+		to get the common jars residing in the nexus server
+	 -->
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>Common jars</name>
+			<url>http://34.238.247.223:8081/repository/group-repo-libs/</url>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+
+<!--
+	  	<dependency>
+		  	<groupId>com.example</groupId>
+		  	<artifactId>demo</artifactId>
+		  	<version>1.0.1</version>
+		</dependency>
+	 -->	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	  <distributionManagement>
+	  	<repository>
+		    <id>nexus</id>
+		    <name>Demo Nexus Repository</name>
+		    <url>http://34.238.247.223:8081/repository/demo-release/</url>
+	    </repository>
+	    <snapshotRepository>
+		    <id>nexus</id>
+		    <name>Demo Nexus snapshot Repository</name>
+		    <url>http://34.238.247.223:8081/repository/demo-snapshot/</url> 
+	    </snapshotRepository>
+	  </distributionManagement>
+ 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
