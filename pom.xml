@@ -84,12 +84,12 @@
 	  	<repository>
 		    <id>nexus</id>
 		    <name>Demo Nexus Repository</name>
-		    <url>http://34.238.247.223:8081/repository/demo-release/</url>
+		    <url>http://54.159.85.9:8081/repository/demo-release/</url>
 	    </repository>
 	    <snapshotRepository>
 		    <id>nexus</id>
 		    <name>Demo Nexus snapshot Repository</name>
-		    <url>http://34.238.247.223:8081/repository/demo-snapshot/</url> 
+		    <url>http://54.159.85.9:8081/repository/demo-snapshot/</url> 
 	    </snapshotRepository>
 	  </distributionManagement>
  
