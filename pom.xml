@@ -21,7 +21,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
-		<sonar.host.url>http://18.206.175.137:9000/</sonar.host.url>
+		<sonar.host.url>http://54.226.212.149.137:9000/</sonar.host.url>
 		
 			<sonar.login>admin</sonar.login>
 			<sonar.password>admin</sonar.password>
@@ -76,12 +76,12 @@
 	  	<repository>
 		    <id>nexus</id>
 		    <name>Demo Nexus Repository</name>
-		    <url>http://54.159.85.9:8081/repository/demo-release/</url>
+		    <url>http://54.144.69.38:8081/repository/niraali-release/</url>
 	    </repository>
 	    <snapshotRepository>
 		    <id>nexus</id>
 		    <name>Demo Nexus snapshot Repository</name>
-		    <url>http://54.159.85.9:8081/repository/demo-snapshot/</url> 
+		    <url>http://54.144.69.38:8081/repository/niraali-snapshot/</url> 
 	    </snapshotRepository>
 	  </distributionManagement>
  
