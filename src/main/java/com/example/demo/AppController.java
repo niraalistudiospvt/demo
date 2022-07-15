@@ -13,7 +13,7 @@ public class AppController {
 
 	@GetMapping("/getm")
 	public String getData() {
-		return "welcome to rest API";
+		return "welcome to rest API in demo project";
 	}
 	
 
